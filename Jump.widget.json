@@ -1,0 +1,44 @@
+{
+    "author": "Heiko Schweder, Based on Ralf Klüber",
+    "name": "Jump",
+    "description": "Jumps to another Dasboard + Status Anzeigen",
+    "template": "<a class=\"dashboard-link\" href=\"#/view/{{config.dashboard_name}}\">\n  {{config.label}}\n</a>\n\n<div ng-hide=\"itemValue(config.stat_anzeige)\">\n        {{itemValue(config.stat)}} {{itemValue(config.stat2)}}  {{config.unit}}\n </div>\n \n",
+    "settings": [
+        {
+            "type": "string",
+            "id": "dashboard_name",
+            "label": "Dashboard",
+            "description": "Name of the Dashboard to jump to"
+        },
+        {
+            "type": "string",
+            "id": "label",
+            "label": "Name"
+        },
+        {
+            "type": "checkbox",
+            "id": "stat_anzeige",
+            "label": "Stat Anzeigen",
+            "description": "Status Anzeigen oder Ausblenden"
+        },
+        {
+            "type": "item",
+            "id": "stat",
+            "label": "Status",
+            "description": "Status Anzeige vom Item"
+        },
+        {
+            "type": "item",
+            "id": "stat2",
+            "label": "Status 2",
+            "description": "Status 2 Anzeige vom Item"
+        },
+        {
+            "type": "string",
+            "id": "unit",
+            "label": "Stat Zeichen",
+            "description": "Status Zeichen (€,W,°C,etc)",
+            "choices": "Euro,W,C,"
+        }
+    ]
+}
